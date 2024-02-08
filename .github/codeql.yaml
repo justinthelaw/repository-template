@@ -1,0 +1,12 @@
+paths-ignore:
+  - build/**
+  - node_modules/**
+  - .venv/**
+  - "/**/*.md"
+  - "/**/*.jpg"
+  - "/**/*.png"
+  - "/**/*.gif"
+  - "/**/*.svg"
+  - "adr/**"
+  - "docs/**"
+  - CODEOWNERS
