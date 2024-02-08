@@ -1,0 +1,7 @@
+# All source code and general documentation
+* @defenseunicorns/leapfrogai
+*.md @defenseunicorns/leapfrogai 
+
+# Additional privileged files
+/CODEOWNERS @jeff-mccoy @austenbryan @gerred
+/LICENSE @jeff-mccoy @austenbryan @gerred

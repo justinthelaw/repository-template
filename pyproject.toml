@@ -1,0 +1,17 @@
+[project]
+name = "leapfrogai-template-repository"
+version = "0.1.0"
+
+description = "LeapfrogAI template repository for referencing and extending"
+authors = [{ name = "LeapfrogAI Authors", email = "ai@defenseunicorns.com" }]
+license = { file = "LICENSE" }
+dependencies = []
+requires-python = "== 3.11.6"
+readme = "README.md"
+
+[project.optional-dependencies]
+dev = ["pip-tools", "pytest", "black", "isort", "pre-commit"]
+gpu = []
+
+[tool.pip-tools]
+generate-hashes = true
