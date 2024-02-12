@@ -9,3 +9,5 @@ This can be used as a GitHub repository template, or as a location to store cert
 This repository contains artifacts and configurations that mainly target the proper management of Golang, Python, Yaml, Bash, Markdown and JavaScript/TypeScript, Jupyter, Zarf, Helm, Docker, Makefile, GitHub workflows and actions, and any other miscellaneous AI, ML, Web and Kubernetes related languages and technologies.
 
 ## Tooling Usage
+
+Please see the workflows in the `.github` directory and the CONTRIBUTING.md for more details.
