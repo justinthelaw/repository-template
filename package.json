@@ -4,7 +4,10 @@
     "author": "Defense Unicorns",
     "license": "Apache-2.0",
     "scripts": {
-        "lint": "eslint ./ --ext '.ts,.tsx' --fix"
+        "start": "npx ts-node src/main.ts",
+        "lint": "eslint ./ --ext '.ts,.tsx' --fix",
+        "build": "echo NotImplementedError",
+        "test": "echo NotImplementedError"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^6.0.0",

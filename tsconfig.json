@@ -17,5 +17,5 @@
       "forceConsistentCasingInFileNames": true
     },
     "include": ["src/**/*.ts", "tests"],
-    "exclude": ["node_modules", "dist", "fixtures", "src/templates", "pepr-test-module"]
+    "exclude": ["node_modules", "dist", "fixtures", ".venv"]
   }
