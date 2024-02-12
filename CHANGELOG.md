@@ -16,26 +16,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Miscellaneous Chores
 
 * release 0.1.0 ([313f3b9](https://github.com/justinthelaw/repository-template/commit/313f3b9bd6231269ed8ea2e4420824b7c2b9d8a5))
-
-## [Unreleased]
-
-## [0.1.0] - YYYY-MM-DD
-
-### Added
-
-- Additions
-
-### Fixed
-
-- Fixes
-
-### Changed
-
-- Changes
-
-### Removed
-
-- Removals
-
-[unreleased]: https://github.com/defenseunicorns/repository-template/compare/v0.1.0...HEAD
-[0.0.1]: https://github.com/defenseunicorns/repository-template/releases/tag/v0.1.0
