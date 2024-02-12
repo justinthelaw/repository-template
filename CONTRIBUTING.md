@@ -30,6 +30,14 @@ Specifically:
 6. Once the review is complete and approved, a core member of the project will merge your PR. If you are an external third-party contributor, two core members of the project will be required to approve the PR.
 7. Close the issue if it is fully resolved by your PR. _Hint: You can add "Fixes #XX" to the PR description to automatically close an issue when the PR is merged._
 
+### Release Please
+
+We've chosen Google's [release-please](https://github.com/googleapis/release-please#release-please) as our automated tag and release solution. Below are some basic usage instructions. Read the documentation provided in the link for more advanced usage.
+
+- Use the conventional commits specification for all PRs that are merged into the `main` branch.
+- To specify a specific version, like a patch or minor, you must provide an empty commit like this: `git commit --allow-empty -m "chore: release 0.1.0" -m "Release-As: 0.1.0"`
+- Maintain and provide a `secrets.RELEASE_PLEASE_TOKEN` Personal Access Token (PAT) as identified in the GitHub workflow YAML.
+
 ### Architecture Decision Records (ADR)
 
 We've chosen to use ADRs to document architecturally significant decisions. We primarily use the guidance found in [this article by Michael Nygard](http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions) with a couple of tweaks:
