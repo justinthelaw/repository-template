@@ -18,3 +18,14 @@ generate-hashes = true
 
 [tool.ruff]
 target-version = "py311"
+
+exclude = [
+    ".eggs",
+    ".git",
+    ".ruff_cache",
+    "__pypackages__",
+    "venv",
+    ".venv",
+    "__pycache__",
+    ".pytest_cache",
+]
