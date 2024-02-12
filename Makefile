@@ -38,7 +38,7 @@ dev:
 	python src/main.py
 
 lint:
-	ruff check .
+	ruff check . --fix
 	ruff format .
 
 docker-build:
