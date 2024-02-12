@@ -1,5 +1,3 @@
-from pathlib import Path
-
 from src.main import main
 
 

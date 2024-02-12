@@ -7,9 +7,10 @@ tmp
 # Models Directory
 .model/*
 
-# Byte-compiled / optimized / DLL files
+# Python directories
 __pycache__/
 .pytest_cache/
+.ruff_cache/
 
 # Distribution / packaging
 *.egg-info/

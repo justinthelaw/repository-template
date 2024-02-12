@@ -37,6 +37,10 @@ test:
 dev:
 	python src/main.py
 
+lint:
+	ruff check . --fix
+	ruff format .
+
 docker-build:
 	echo "NotImplementedError"
 
