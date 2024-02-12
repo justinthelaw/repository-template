@@ -10,8 +10,11 @@ requires-python = "== 3.11.6"
 readme = "README.md"
 
 [project.optional-dependencies]
-dev = ["pip-tools", "pytest", "black", "isort", "pre-commit"]
+dev = ["pip-tools", "pytest", "black", "isort", "pre-commit", "ruff"]
 gpu = []
 
 [tool.pip-tools]
 generate-hashes = true
+
+[tool.ruff]
+target-version = "py311"
