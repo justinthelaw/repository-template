@@ -12,5 +12,5 @@ jobs:
     steps:
       - uses: yogevbd/enforce-label-action@a3c219da6b8fa73f6ba62b68ff09c469b3a1c024 # v2.2.2
         with:
-          REQUIRED_LABELS_ANY: "bug,enhancement,documentation,feature,chore,autorelease: pending,autorelease: tagged"
+          REQUIRED_LABELS_ANY: "bug,enhancement,documentation,chore,autorelease: pending,autorelease: tagged"
           BANNED_LABELS: "needs-docs,needs-tests,needs-adr,needs-git-sign-off,needs-tutorial"

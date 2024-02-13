@@ -5,7 +5,10 @@
     "license": "Apache-2.0",
     "scripts": {
         "start": "npx ts-node src/main.ts",
-        "lint": "eslint ./ --ext '.ts,.tsx' --fix",
+        "lint": "eslint ./ --ext '.ts,.tsx'",
+        "lint-fix": "eslint ./ --ext '.ts,.tsx' --fix",
+        "format": "prettier -c src/",
+        "format-fix": "prettier -w src/",
         "build": "echo NotImplementedError",
         "test": "echo NotImplementedError"
     },
@@ -16,6 +19,7 @@
         "eslint-config-prettier": "^9.1.0",
         "eslint-config-react-app": "^7.0.1",
         "eslint-plugin-prettier": "^5.0.0",
+        "playwright": "^1.41.2",
         "prettier": "^3.0.0",
         "prettier-plugin-organize-imports": "^3.2.2"
     }
