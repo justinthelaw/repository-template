@@ -5,18 +5,26 @@
     "license": "Apache-2.0",
     "scripts": {
         "start": "npx ts-node src/main.ts",
-        "lint": "eslint ./ --ext '.ts,.tsx' --fix",
+        "lint": "eslint src/ --ext '.js,.jsx,.ts,.tsx,.svelte'",
+        "lint-fix": "eslint src/ --ext '.js,.jsx,.ts,.tsx,.svelte' --fix",
+        "format": "prettier -c src/",
+        "format-fix": "prettier -w src/",
         "build": "echo NotImplementedError",
-        "test": "echo NotImplementedError"
+        "playwright": "playwright test"
     },
     "devDependencies": {
+        "@playwright/test": "^1.41.2",
+        "@types/node": "^20.11.17",
         "@typescript-eslint/eslint-plugin": "^6.0.0",
         "@typescript-eslint/parser": "^6.0.0",
-        "eslint": "^8.44.0",
+        "eslint": "^8.56.0",
         "eslint-config-prettier": "^9.1.0",
-        "eslint-config-react-app": "^7.0.1",
         "eslint-plugin-prettier": "^5.0.0",
+        "eslint-plugin-svelte": "^2.35.1",
+        "playwright": "^1.41.2",
         "prettier": "^3.0.0",
-        "prettier-plugin-organize-imports": "^3.2.2"
+        "prettier-plugin-organize-imports": "^3.2.2",
+        "prettier-plugin-svelte": "^3.0.3",
+        "svelte": "^4.2.10"
     }
 }

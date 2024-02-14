@@ -39,6 +39,19 @@ repos:
             types_or: [python, pyi, jupyter]
             pass_filenames: false
 
+    - repo: https://github.com/pre-commit/mirrors-eslint
+      rev: v8.56.0
+      hooks:
+          - id: eslint
+            name: ESLint and Prettier
+            files: \.([jt]sx?|svelte)$ # *.js, *.jsx, *.ts, *.tsx and *.svelte
+            types: [file]
+            additional_dependencies:
+                - eslint@8.44.0
+                - eslint-plugin-prettier@5.0.0
+                - eslint-plugin-svelte@2.35.1
+            args: [--fix]
+
     - repo: https://github.com/python-jsonschema/check-jsonschema
       rev: 0.14.0
       hooks:

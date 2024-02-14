@@ -1,21 +1,21 @@
 {
     "compilerOptions": {
-      "allowSyntheticDefaultImports": true,
-      "declaration": true,
-      "declarationMap": true,
-      "emitDeclarationOnly": true,
-      "esModuleInterop": true,
-      "lib": ["ES2022", "DOM"],
-      "module": "commonJS",
-      "moduleResolution": "node",
-      "outDir": "dist",
-      "resolveJsonModule": true,
-      "rootDir": "src",
-      "strict": true,
-      "target": "ES2022",
-      "useUnknownInCatchVariables": false,
-      "forceConsistentCasingInFileNames": true
+        "allowSyntheticDefaultImports": true,
+        "declaration": true,
+        "declarationMap": true,
+        "emitDeclarationOnly": true,
+        "esModuleInterop": true,
+        "lib": ["ES2022", "DOM"],
+        "module": "commonJS",
+        "moduleResolution": "node",
+        "outDir": "dist",
+        "resolveJsonModule": true,
+        "rootDir": ".",
+        "strict": true,
+        "target": "ES2022",
+        "useUnknownInCatchVariables": false,
+        "forceConsistentCasingInFileNames": true
     },
-    "include": ["src/**/*.ts", "tests"],
+    "include": ["src/**/*.ts*", "src/**/*.js*", "src/**/*.svelte", "tests/**/*.ts"],
     "exclude": ["node_modules", "dist", "fixtures", ".venv"]
-  }
+}
