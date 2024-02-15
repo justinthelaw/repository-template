@@ -21,9 +21,8 @@ jest.config.json
 /src/cli
 /src/fixtures
 
-/CODEOWNERS
-/CONTRIBUTING.md
-/SECURITY.md
+/CHANGELOG.md
+.github/
 /README.md
 /Dockerfile*
 /insecure*
