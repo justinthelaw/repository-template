@@ -21,6 +21,6 @@ jobs:
           token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
           # this is a built-in strategy in release-please, see "Action Inputs"
           # for more options
-          release-type: simple
-          manifest-file: /.release-please-manifest.json
-          config-file: /release-please-config.json
+          release-type: simple # python or node too
+          manifest-file: .release-please-manifest.json
+          config-file: release-please-config.json
