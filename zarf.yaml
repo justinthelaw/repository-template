@@ -1,0 +1,30 @@
+kind: ZarfPackageConfig
+metadata:
+  name: example
+  # x-release-please-start-version
+  version: 0.3.0
+  # x-release-please-end
+  description: >
+    repository template
+
+constants:
+  - name: IMAGE_VERSION
+    value: "###ZARF_PKG_TMPL_IMAGE_VERSION###"
+  - name: NAME
+    value: "###ZARF_PKG_TMPL_NAME###"
+  - name: IMAGE_REPOSITORY
+    value: "###ZARF_PKG_TMPL_IMAGE_REPOSITORY###"
+
+components:
+  - name: example
+    required: true
+    charts:
+    - name: example
+      namespace: example
+      localPath: chart
+      releaseName: "###ZARF_PKG_TMPL_NAME###"
+      # x-release-please-start-version
+      version: 0.3.0
+      # x-release-please-end
+    images:
+      - "###ZARF_PKG_TMPL_IMAGE_REPOSITORY###:###ZARF_PKG_TMPL_IMAGE_VERSION###"

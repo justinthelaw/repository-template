@@ -1,6 +1,6 @@
 [project]
-name = "leapfrogai-template-repository"
-version = "0.1.0"
+name = "template-repository"
+version = "0.3.0"
 
 description = "LeapfrogAI template repository for referencing and extending"
 authors = [{ name = "LeapfrogAI Authors", email = "ai@defenseunicorns.com" }]
