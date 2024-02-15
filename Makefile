@@ -42,13 +42,16 @@ lint:
 	ruff format .
 
 docker-build:
-	echo "NotImplementedError"
+	docker build -t ghcr.io/justinthelaw/repository-template/example:${VERSION} .
 
 docker-run:
-	echo "NotImplementedError"
+	docker run ghcr.io/justinthelaw/repository-template/example:${VERSION}
 
 docker-run-gpu:
-	echo "NotImplementedError"
+	echo "NotImplementedError, GPU Device: ${DEVICE}"
 
 docker-push:
-	echo "NotImplementedError"
+	docker push ghcr.io/justinthelaw/repository-template/example:${VERSION}
+
+zarf-create:
+	zarf package create . --confirm
