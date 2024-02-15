@@ -2,7 +2,7 @@
 name = "template-repository"
 version = "0.3.0"
 
-description = "LeapfrogAI template repository for referencing and extending"
+description = "Template repository for referencing and extending"
 authors = [{ name = "LeapfrogAI Authors", email = "ai@defenseunicorns.com" }]
 license = { file = "LICENSE" }
 dependencies = []

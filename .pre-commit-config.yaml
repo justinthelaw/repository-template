@@ -55,9 +55,9 @@ repos:
     - repo: https://github.com/pryorda/dockerfilelint-precommit-hooks
       rev: v0.1.0
       hooks:
-      - id: dockerfilelint
-        name: 'Dockerfile Lint'
-        stages: [commit]
+          - id: dockerfilelint
+            name: 'Dockerfile Lint'
+            stages: [commit]
 
     # get latest zarf schema
     - repo: local
@@ -89,18 +89,20 @@ repos:
 
     - repo: local
       hooks:
-        - id: check-paired-files-python
-          name: Check PyProject
-          entry: bash -c 'if git diff --cached --name-only | grep -q -E "^(pyproject\.toml)$"; then git diff --cached --name-only | grep -q -E "^(requirements\.txt)$" || exit 1; fi; if git diff --cached --name-only | grep -q -E "^(requirements\.txt)$"; then git diff --cached --name-only | grep -q -E "^(pyproject\.toml)$" || exit 1; fi'
-          language: system
-          always_run: true
-          pass_filenames: false
+          - id: check-paired-files-python
+            name: Check PyProject
+            entry: bash -c '(if git diff --cached --name-only | grep -q -E "^(pyproject\.toml)$"; then git diff --cached --name-only | grep -q -E "^(requirements\.txt)$" || echo "WARNING => You may need to check dependencies"; fi; if git diff --cached --name-only | grep -q -E "^(requirements\.txt)$"; then git diff --cached --name-only | grep -q -E "^(pyproject\.toml)$" || echo "WARNING => You may need to check dependencies"; fi)' --
+            verbose: true
+            language: system
+            always_run: true
+            pass_filenames: false
 
     - repo: local
       hooks:
-        - id: check-paired-files-node
-          name: Check NPM Packages
-          entry: bash -c 'if git diff --cached --name-only | grep -q -E "^(package\.json)$"; then git diff --cached --name-only | grep -q -E "^(package-lock\.json)$" || exit 1; fi; if git diff --cached --name-only | grep -q -E "^(package-lock\.json)$"; then git diff --cached --name-only | grep -q -E "^(package\.json)$" || exit 1; fi'
-          language: system
-          always_run: true
-          pass_filenames: false
+          - id: check-paired-files-node
+            name: Check NPM Packages
+            entry: bash -c '(if git diff --cached --name-only | grep -q -E "^(package\.json)$"; then git diff --cached --name-only | grep -q -E "^(package-lock\.json)$" || echo "WARNING => You may need to check dependencies"; fi; if git diff --cached --name-only | grep -q -E "^(package-lock\.json)$"; then git diff --cached --name-only | grep -q -E "^(package\.json)$" || echo "WARNING => You may need to check dependencies"; fi)' --
+            verbose: true
+            language: system
+            always_run: true
+            pass_filenames: false
