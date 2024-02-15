@@ -52,6 +52,13 @@ repos:
                 - eslint-plugin-svelte@2.35.1
             args: [--fix]
 
+    - repo: https://github.com/pryorda/dockerfilelint-precommit-hooks
+      rev: v0.1.0
+      hooks:
+      - id: dockerfilelint
+        name: 'Dockerfile Lint'
+        stages: [commit]
+
     # get latest zarf schema
     - repo: local
       hooks:
