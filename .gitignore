@@ -3,6 +3,7 @@ zarf*.tar.zst
 zarf-sbom/
 temp/
 tmp
+zarf.schema.json
 
 # Models Directory
 .model/*

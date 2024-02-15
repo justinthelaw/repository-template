@@ -52,6 +52,15 @@ repos:
                 - eslint-plugin-svelte@2.35.1
             args: [--fix]
 
+    # get latest zarf schema
+    - repo: local
+      hooks:
+          - id: download-schema
+            name: 'Download Zarf Schema'
+            entry: bash -c 'curl -o zarf.schema.json https://raw.githubusercontent.com/defenseunicorns/zarf/main/zarf.schema.json'
+            language: system
+
+    # check against latest zarf schema
     - repo: https://github.com/python-jsonschema/check-jsonschema
       rev: 0.14.0
       hooks:
@@ -60,3 +69,11 @@ repos:
             files: 'zarf.yaml'
             types: [yaml]
             args: ['--schemafile', 'zarf.schema.json']
+
+    # clean-up latest zarf schema
+    - repo: local
+      hooks:
+          - id: delete-schema
+            name: 'Delete Zarf Schema'
+            entry: bash -c 'rm -f zarf.schema.json'
+            language: system

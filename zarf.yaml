@@ -1,0 +1,21 @@
+kind: ZarfPackageConfig
+metadata:
+  name: example
+  version: 0.1.0
+  description: >
+    repository template
+
+constants:
+  - name: IMAGE_VERSION
+    value: "###ZARF_PKG_TMPL_IMAGE_VERSION###"
+  - name: NAME
+    value: "###ZARF_PKG_TMPL_NAME###"
+
+components:
+  - name: example
+    required: true
+    manifests:
+      - name: example
+        namespace: example
+    images:
+      - "###ZARF_PKG_TMPL_IMAGE_REPOSITORY###:v###ZARF_PKG_TMPL_IMAGE_VERSION###"
