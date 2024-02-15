@@ -43,13 +43,13 @@ resources:
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
   limits:
-    cpu: "###ZARF_VAR_LIMITS_CPU###"
-    memory: "###ZARF_VAR_LIMITS_MEMORY###"
-    nvidia.com/gpu: "###ZARF_VAR_LIMITS_GPU###"
+    cpu: 0
+    memory: 0
+    nvidia.com/gpu: 0
   requests:
-    cpu: "###ZARF_VAR_REQUESTS_CPU###"
-    memory: "###ZARF_VAR_REQUESTS_MEMORY###"
-    nvidia.com/gpu: "###ZARF_VAR_REQUESTS_GPU###"
+    cpu: 0
+    memory: 0
+    nvidia.com/gpu: 0
 
 autoscaling:
   enabled: false

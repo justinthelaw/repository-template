@@ -45,7 +45,7 @@ docker-build:
 	docker build -t ghcr.io/justinthelaw/repository-template/example:${VERSION} .
 
 docker-run:
-	docker run ghcr.io/justinthelaw/repository-template/example:${VERSION}
+	docker run -it ghcr.io/justinthelaw/repository-template/example:${VERSION}
 
 docker-run-gpu:
 	echo "NotImplementedError, GPU Device: ${DEVICE}"
@@ -55,3 +55,9 @@ docker-push:
 
 zarf-create:
 	zarf package create . --confirm
+
+zarf-deploy:
+	zarf package deploy --confirm zarf-package-*.tar.zst
+
+zarf-publish:
+	zarf package publish zarf-*.tar.zst oci://ghcr.io/justinthelaw/packages/
