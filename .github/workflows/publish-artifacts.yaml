@@ -8,6 +8,7 @@ on:
 
 jobs:
   publish-artifacts:
+    permissions: write-all
     runs-on: ubuntu-latest
 
     steps:
