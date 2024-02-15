@@ -10,7 +10,7 @@ This can be used as a GitHub repository template, or as a location to store cert
 
 This repository contains artifacts and configurations that mainly target the proper management of Golang, Python, Yaml, Bash, Markdown and JavaScript/TypeScript, Jupyter, Zarf, Helm, Docker, Makefile, GitHub workflows and actions, and any other miscellaneous AI, ML, Web and Kubernetes related languages and technologies.
 
-Please see the [template-sync action](.github/workflows/template-sync.yaml) for details on how this template can be used in a more modular fashion thn traditional forking or templates in GitHub.
+Please see the [template-sync action](.github/workflows/template-sync.yaml) for details on how this template can be used in a more modular fashion than traditional forking or templates in GitHub.
 
 ## Tooling Usage
 
