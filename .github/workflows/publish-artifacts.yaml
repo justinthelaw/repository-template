@@ -7,7 +7,7 @@ on:
       - "dev"
 
 jobs:
-  zarf:
+  publish-artifacts:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,8 +21,8 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Build API Image
-      run: make docker-build docker-push VERSION=$GITHUB_REF_NAME
+    - name: Build Image
+      run:  VERSION=$GITHUB_REF_NAME make docker-build && VERSION=$GITHUB_REF_NAME make docker-push
 
     - name: Install Zarf
       uses: defenseunicorns/setup-zarf@f95763914e20e493bb5d45d63e30e17138f981d6 # v1.0.0
