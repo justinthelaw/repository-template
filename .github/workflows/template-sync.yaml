@@ -1,0 +1,30 @@
+name: Template Sync
+
+# add this to repositories that should be using this template
+# this action will create a PR for deconfliction
+
+on:
+  # cronjob trigger At 00:00 on day-of-month 1. https://crontab.guru/every-month
+  schedule:
+    - cron: "0 0 1 * *"
+  # manual trigger
+  workflow_dispatch:
+
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+
+      - name: Template Sync
+        uses: AndreasAugustin/actions-template-sync@33f86ba0dbd01d559b5ce5d28482148622555b11 # v1.5.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          source_repo_path: justinthelaw/repository-template
+          upstream_branch: main
+          pr_labels: chore,template-sync

@@ -10,3 +10,4 @@ paths-ignore:
   - "adr/**"
   - "docs/**"
   - CODEOWNERS
+  - .github/**
