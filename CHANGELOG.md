@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.2](https://github.com/justinthelaw/repository-template/compare/v0.4.1...v0.4.2) (2024-02-21)
+
+
+### Bug Fixes
+
+* language version pins ([#49](https://github.com/justinthelaw/repository-template/issues/49)) ([4b675fd](https://github.com/justinthelaw/repository-template/commit/4b675fdf62e0231b2d524f93ebaf41a999faefb4))
+* npm dependencies, pre-commit warnings ([#38](https://github.com/justinthelaw/repository-template/issues/38)) ([6ac3d11](https://github.com/justinthelaw/repository-template/commit/6ac3d1168cd9e7acfab5779e9e7ec669e3328c42))
+* release-please, and commit-lint fixes ([#48](https://github.com/justinthelaw/repository-template/issues/48)) ([0e79652](https://github.com/justinthelaw/repository-template/commit/0e79652113a505102a1c35a6258932162598cbff))
+* remove token for release please ([#50](https://github.com/justinthelaw/repository-template/issues/50)) ([8da6f75](https://github.com/justinthelaw/repository-template/commit/8da6f75f524760f847fcc617a355a73bba77ea60))
+
 ## [0.4.1](https://github.com/justinthelaw/repository-template/compare/v0.4.0...v0.4.1) (2024-02-15)
 
 
