@@ -2,13 +2,23 @@
     "packages": {
       ".": {
         "release-type": "simple",
-        "draft": true,
+        "draft": false,
         "changelog-path": "CHANGELOG.md",
         "versioning": "default",
         "extra-files": [
           "chart/Chart.yaml",
           "zarf.yaml",
-          "zarf-config.yaml"
+          "zarf-config.yaml",
+          {
+            "type": "json",
+            "path": "package.json",
+            "jsonpath": "$.version"
+          },
+          {
+            "type": "toml",
+            "path": "pyproject.toml",
+            "jsonpath": "$.project.version"
+          }
         ]
       }
     }
