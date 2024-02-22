@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * combine release and publish ([#52](https://github.com/justinthelaw/repository-template/issues/52)) ([42b33fe](https://github.com/justinthelaw/repository-template/commit/42b33fe8362ec61a6c8c29e0c0f31b91f157e583))
 
-## [0.4.2](https://github.com/justinthelaw/repository-template/compare/v0.4.1...v0.4.2) (2024-02-21)
+## [0.4.2](https://github.com/justinthelaw/repository-template/compare/v0.5.0...v0.4.2) (2024-02-21)
 
 
 ### Bug Fixes
@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * release-please, and commit-lint fixes ([#48](https://github.com/justinthelaw/repository-template/issues/48)) ([0e79652](https://github.com/justinthelaw/repository-template/commit/0e79652113a505102a1c35a6258932162598cbff))
 * remove token for release please ([#50](https://github.com/justinthelaw/repository-template/issues/50)) ([8da6f75](https://github.com/justinthelaw/repository-template/commit/8da6f75f524760f847fcc617a355a73bba77ea60))
 
-## [0.4.1](https://github.com/justinthelaw/repository-template/compare/v0.4.0...v0.4.1) (2024-02-15)
+## [0.5.0](https://github.com/justinthelaw/repository-template/compare/v0.4.0...v0.5.0) (2024-02-15)
 
 
 ### Bug Fixes
