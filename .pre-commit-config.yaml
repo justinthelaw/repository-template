@@ -85,6 +85,33 @@ repos:
             entry: bash -c 'rm -f zarf.schema.json'
             language: system
 
+
+    # get latest uds schema
+    - repo: local
+      hooks:
+          - id: download-schema
+            name: 'Download UDS Schema'
+            entry: bash -c 'curl -o uds.schema.json https://raw.githubusercontent.com/defenseunicorns/uds-cli/main/uds.schema.json'
+            language: system
+
+    # check against latest uds schema
+    - repo: https://github.com/python-jsonschema/check-jsonschema
+      rev: 0.14.0
+      hooks:
+          - id: check-jsonschema
+            name: 'Validate UDS Configs Against Schema'
+            files: 'uds.yaml'
+            types: [yaml]
+            args: ['--schemafile', 'uds.schema.json']
+
+    # clean-up latest uds schema
+    - repo: local
+      hooks:
+          - id: delete-schema
+            name: 'Delete UDS Schema'
+            entry: bash -c 'rm -f uds.schema.json'
+            language: system
+
     # naive approaches for checking dependencies versus project definitions
 
     - repo: local
