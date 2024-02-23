@@ -17,3 +17,5 @@ jobs:
         uses: google-github-actions/release-please-action@cc61a07e2da466bebbc19b3a7dd01d6aecb20d1e # v4.0.2
         with:
           release-type: simple # python or node too
+          manifest-file: "../../.release-please-manifest.json"
+          config-file: "../../release-please-config.json"
