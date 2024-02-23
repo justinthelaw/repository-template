@@ -1,8 +1,11 @@
 {
     "name": "leapfrogai-repository-template",
-    "version": "0.4.1",
+    "version": "0.5.0",
     "author": "Defense Unicorns",
     "license": "Apache-2.0",
+    "engines": {
+        "node": "21.5.0"
+    },
     "scripts": {
         "start": "npx ts-node src/main.ts",
         "lint": "eslint src/ --ext '.js,.jsx,.ts,.tsx,.svelte'",
@@ -14,7 +17,7 @@
     },
     "devDependencies": {
         "@playwright/test": "^1.41.2",
-        "@types/node": "^20.11.17",
+        "@types/node": "^20.11.19",
         "@typescript-eslint/eslint-plugin": "^7.0.0",
         "@typescript-eslint/parser": "^6.0.0",
         "eslint": "^8.56.0",
@@ -25,6 +28,6 @@
         "prettier": "^3.0.0",
         "prettier-plugin-organize-imports": "^3.2.2",
         "prettier-plugin-svelte": "^3.0.3",
-        "svelte": "^4.2.10"
+        "svelte": "^4.2.11"
     }
 }
