@@ -5,6 +5,10 @@ temp/
 tmp
 zarf.schema.json
 
+# Schema files
+uds.schema.json
+zarf.schema.json
+
 # Models Directory
 .model/*
 
