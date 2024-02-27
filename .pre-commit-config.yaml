@@ -3,17 +3,27 @@ repos:
       rev: v4.0.1
       hooks:
           - id: check-added-large-files
+            name: Large Files check
             args: ['--maxkb=1024']
+
           - id: check-merge-conflict
-          - id: detect-aws-credentials
-            args:
-                - '--allow-missing-credentials'
-          - id: detect-private-key
+            name: Merge Conflict Resolution Check
+
           - id: end-of-file-fixer
+            name: Newline EOF Checker
+
           - id: fix-byte-order-marker
             name: Fix UTF-8 byte order marker
+
           - id: trailing-whitespace
+            name: Whitespace Cleaning Check
             args: [--markdown-linebreak-ext=md]
+
+    - repo: https://github.com/gitleaks/gitleaks
+      rev: v8.18.0
+      hooks:
+      - id: gitleaks
+        name: GitLeaks Checks
 
     - repo: https://github.com/sirosen/fix-smartquotes
       rev: 0.2.0

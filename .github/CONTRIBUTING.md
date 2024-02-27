@@ -58,19 +58,3 @@ We've chosen to use ADRs to document architecturally significant decisions. We p
 - We will keep ADRs specific to this package in the repository under `adr/NNNN-name-of-adr.md`.
     > `adr-tools` is configured with a dotfile to automatically use this directory and format.
 - We will keep ADRs relating to Software Factory as a whole in the [UDS Software Factory](https://github.com/defenseunicorns/uds-software-factory) repository under `adr/NNNN-name-of-adr.md`.
-
-### How to use `adr-tools`
-
-```bash
-# Create a new ADR titled "Use Bisquick for all waffle making"
-adr new Use Bisquick for all waffle making
-
-# Create a new ADR that supersedes a previous one. Let's say, for example, that the previous ADR about Bisquick was ADR number 9.
-adr new -s 9 Use scratch ingredients for all waffle making
-
-# Create a new ADR that amends a previous one. Let's say the previous one was ADR number 15
-adr new -l "15:Amends:Amended by" Use store-bought butter for all waffle making
-
-# Get full help docs. There are all sorts of other helpful commands that help manage the decision log.
-adr help
-```
