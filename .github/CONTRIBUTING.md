@@ -38,8 +38,7 @@ Specifically:
 6. :key: Automated tests will begin based on the paths you have edited in your Pull Request.
     > ⚠️ **NOTE:** _If you are an external third-party contributor, the pipelines won't run until a [CODEOWNER](./CODEOWNERS) approves the pipeline run._
 7. :key: Be sure to heed the `needs-adr`,`needs-docs`,`needs-tests` labels as appropriate for the PR. Once you have addressed all of the needs, remove the label or request a maintainer to remove it.
-8. Once the review is complete and approved, a core member of the project will merge your PR. If you are an external third-party contributor, two core members of the project will be required to approve the PR.
-    - A minimum of 1 review is required per PR through GitHub's branch protection settings; however, this team will honor a minimum wait time of 48 hours so that other potential CODEOWNERS can review the PR prior to a merge into the main branch.
+8. Once the review is complete and approved, a core member of the project will merge your PR. If you are an external third-party contributor, two core members (CODEOWNERS) of the project will be required to approve the PR.
 9. Close the issue if it is fully resolved by your PR. _Hint: You can add "Fixes #XX" to the PR description to automatically close an issue when the PR is merged._
 
 ### Release Please
