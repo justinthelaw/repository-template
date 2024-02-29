@@ -7,7 +7,7 @@ on:
       - dev
 
 env:
-  REGISTRY_IMAGE: defenseunicorns/leapfrogai-ui
+  REGISTRY_IMAGE: justinthelaw/repository-template
   REGISTRY: ghcr.io
 
 jobs:
