@@ -1,6 +1,8 @@
 name: Python Lint and Format
 
-on: [pull_request, push]
+on:
+  pull_request:
+      branches: [main]
 
 jobs:
   ruff:
