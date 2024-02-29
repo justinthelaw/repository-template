@@ -30,6 +30,12 @@ repos:
       hooks:
           - id: fix-smartquotes
 
+    - repo: https://github.com/DavidAnson/markdownlint-cli2
+      rev: v0.12.1
+      hooks:
+        - id: markdownlint-cli2
+          name: Markdown Linting
+
     - repo: https://github.com/dnephin/pre-commit-golang
       rev: v0.4.0
       hooks:
