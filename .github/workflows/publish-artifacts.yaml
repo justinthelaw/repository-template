@@ -4,9 +4,10 @@ on:
   push:
     tags:
       - "v*.*.*"
+      - dev
 
 env:
-  REGISTRY_IMAGE: justinthelaw/repository-template
+  REGISTRY_IMAGE: defenseunicorns/leapfrogai-ui
   REGISTRY: ghcr.io
 
 jobs:
@@ -18,8 +19,6 @@ jobs:
         platform:
           - linux/amd64
           - linux/arm64
-          - linux/arm/v7
-          - windows/amd64
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4

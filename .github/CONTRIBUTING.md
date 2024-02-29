@@ -38,7 +38,7 @@ Specifically:
 6. :key: Automated tests will begin based on the paths you have edited in your Pull Request.
     > ⚠️ **NOTE:** _If you are an external third-party contributor, the pipelines won't run until a [CODEOWNER](./CODEOWNERS) approves the pipeline run._
 7. :key: Be sure to heed the `needs-adr`,`needs-docs`,`needs-tests` labels as appropriate for the PR. Once you have addressed all of the needs, remove the label or request a maintainer to remove it.
-8. Once the review is complete and approved, a core member of the project will merge your PR. If you are an external third-party contributor, two core members of the project will be required to approve the PR.
+8. Once the review is complete and approved, a core member of the project will merge your PR. If you are an external third-party contributor, two core members (CODEOWNERS) of the project will be required to approve the PR.
 9. Close the issue if it is fully resolved by your PR. _Hint: You can add "Fixes #XX" to the PR description to automatically close an issue when the PR is merged._
 
 ### Release Please
@@ -58,19 +58,3 @@ We've chosen to use ADRs to document architecturally significant decisions. We p
 - We will keep ADRs specific to this package in the repository under `adr/NNNN-name-of-adr.md`.
     > `adr-tools` is configured with a dotfile to automatically use this directory and format.
 - We will keep ADRs relating to Software Factory as a whole in the [UDS Software Factory](https://github.com/defenseunicorns/uds-software-factory) repository under `adr/NNNN-name-of-adr.md`.
-
-### How to use `adr-tools`
-
-```bash
-# Create a new ADR titled "Use Bisquick for all waffle making"
-adr new Use Bisquick for all waffle making
-
-# Create a new ADR that supersedes a previous one. Let's say, for example, that the previous ADR about Bisquick was ADR number 9.
-adr new -s 9 Use scratch ingredients for all waffle making
-
-# Create a new ADR that amends a previous one. Let's say the previous one was ADR number 15
-adr new -l "15:Amends:Amended by" Use store-bought butter for all waffle making
-
-# Get full help docs. There are all sorts of other helpful commands that help manage the decision log.
-adr help
-```

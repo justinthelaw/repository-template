@@ -14,8 +14,7 @@ jobs:
     steps:
       - name: Create Release and Tag
         id: tag
-        uses: google-github-actions/release-please-action@cc61a07e2da466bebbc19b3a7dd01d6aecb20d1e # v4.0.2
+        uses: google-github-actions/release-please-action@00911586051618367fa9c19b161a0a146ac51970 # v2.35.0
         with:
-          release-type: simple # python or node too
-          manifest-file: "../../.release-please-manifest.json"
-          config-file: "../../release-please-config.json"
+          release-type: simple
+          command: manifest
