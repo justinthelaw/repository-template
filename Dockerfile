@@ -11,10 +11,8 @@ COPY tsconfig.json /app/tsconfig.json
 RUN npm install
 RUN npm install ts-node@10.9.2
 
-RUN mkdir .cache
-RUN chown -R 65532:65532 "/app/.cache"
-ENV npm_config_cache="/app/.cache"
+RUN mkdir .cache && chown -R 65532:65532 "/app/.cache"
 
-EXPOSE 5173:5173
+ENV npm_config_cache="/app/.cache"
 
 CMD ["npm", "start"]
