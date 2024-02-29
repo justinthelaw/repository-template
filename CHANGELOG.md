@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.0](https://github.com/justinthelaw/repository-template/compare/v0.6.2...v0.7.0) (2024-02-29)
+
+
+### Features
+
+* combined release and publish ([#76](https://github.com/justinthelaw/repository-template/issues/76)) ([993f7d6](https://github.com/justinthelaw/repository-template/commit/993f7d604c476fbac692148cb375620d4b986a68))
+
 ## [0.6.2](https://github.com/justinthelaw/repository-template/compare/v0.6.1...v0.6.2) (2024-02-29)
 
 
