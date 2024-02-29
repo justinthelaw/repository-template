@@ -129,12 +129,19 @@ repos:
             language: system
 
     # naive approaches for checking dependencies versus project definitions
+    # creates warning messages if changes are detected in any of the dependency files
 
     - repo: local
       hooks:
           - id: check-paired-files-python
             name: Check PyProject
-            entry: bash -c '(if git diff --cached --name-only | grep -q -E "^(pyproject\.toml)$"; then git diff --cached --name-only | grep -q -E "^(requirements\.txt)$" || echo "Warning, you may need to check your Python dependencies"; fi; if git diff --cached --name-only | grep -q -E "^(requirements\.txt)$"; then git diff --cached --name-only | grep -q -E "^(pyproject\.toml)$" || echo "Warning, you may need to check your Python dependencies"; fi)' --
+            entry: bash -c '
+                    if git diff --cached --name-only | grep -q -E "^(pyproject\.toml)$"; then
+                        git diff --cached --name-only | grep -q -E "^(requirements(-[^.]+)?\.txt)$" || echo "Warning, you may need to check your Python dependencies";
+                    fi;
+                    if git diff --cached --name-only | grep -q -E "^(requirements(-[^.]+)?\.txt)$"; then
+                        git diff --cached --name-only | grep -q -E "^(pyproject\.toml)$" || echo "Warning, you may need to check your Python dependencies";
+                    fi'
             language: system
             always_run: true
             pass_filenames: false
@@ -143,7 +150,14 @@ repos:
       hooks:
           - id: check-paired-files-node
             name: Check NPM Packages
-            entry: bash -c '(if git diff --cached --name-only | grep -q -E "^(package\.json)$"; then git diff --cached --name-only | grep -q -E "^(package-lock\.json)$" || echo "Warning, you may need to check your NPM dependencies"; fi; if git diff --cached --name-only | grep -q -E "^(package-lock\.json)$"; then git diff --cached --name-only | grep -q -E "^(package\.json)$" || echo "Warning, you may need to check your NPM dependencies"; fi)' --
+            entry: bash -c '
+                if git diff --cached --name-only | grep -q -E "^(package\.json)$"; then
+                    git diff --cached --name-only | grep -q -E "^(package-lock\.json)$" || echo "Warning, you may need to check your NPM dependencies";
+                fi;
+                if git diff --cached --name-only | grep -q -E "^(package-lock\.json)$"; then
+                    git diff --cached --name-only | grep -q -E "^(package\.json)$" || echo "Warning, you may need to check your NPM dependencies";
+                fi
+                ' --
             language: system
             always_run: true
             pass_filenames: false
