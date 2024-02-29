@@ -1,4 +1,4 @@
-name: Build and Push Image
+name: Build and Publish
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - dev
 
 env:
-  REGISTRY_IMAGE: defenseunicorns/leapfrogai-ui
+  REGISTRY_IMAGE: justinthelaw/repository-template
   REGISTRY: ghcr.io
 
 jobs:
