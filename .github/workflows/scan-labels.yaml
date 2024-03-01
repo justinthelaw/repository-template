@@ -1,6 +1,9 @@
 name: Validate Labels
 
 on:
+  push:
+    branches:
+      - '!main'
   pull_request:
     branches: [main]
     types: [labeled, unlabeled, opened, edited, synchronize]
