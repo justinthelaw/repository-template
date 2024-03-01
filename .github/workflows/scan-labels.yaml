@@ -2,6 +2,7 @@ name: Validate Labels
 
 on:
   pull_request:
+    branches: [main]
     types: [labeled, unlabeled, opened, edited, synchronize]
 
 permissions:

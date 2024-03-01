@@ -2,7 +2,7 @@ name: Python Lint and Format
 
 on:
   pull_request:
-      branches: [main]
+    branches: [main]
 
 jobs:
   ruff:

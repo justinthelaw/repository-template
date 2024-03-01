@@ -1,8 +1,8 @@
 name: Node Lint and Format
 
 on:
-    pull_request:
-        branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   eslint:
