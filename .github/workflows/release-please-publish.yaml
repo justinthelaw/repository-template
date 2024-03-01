@@ -10,6 +10,7 @@ on:
 env:
   REGISTRY_IMAGE: justinthelaw/repository-template/example
   REGISTRY: ghcr.io
+  VERSION: 0.7.3
 
 jobs:
   release-please:
@@ -53,10 +54,13 @@ jobs:
         with:
           images: ${{ env.REGISTRY_IMAGE }}
           tags: |
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}}
-            type=sha
+            type=semver,pattern={{version}},priority=1000,value=${{ env.VERSION }}
+            type=semver,pattern={{major}}.{{minor}},priority=900,value=${{ env.VERSION }}
+            type=semver,pattern={{major}},priority=800,value=${{ env.VERSION }}
+            type=sha,priority=700
+            type=ref,event=pr,priority=600
+            type=ref,event=branch,priority=500
+            type=schedule,priority=400
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@68827325e0b33c7199eb31dd4e31fbe9023e06e3 # v3.0.0
@@ -121,10 +125,13 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.REGISTRY_IMAGE }}
           tags: |
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}}
-            type=sha
+            type=semver,pattern={{version}},priority=1000,value=${{ env.VERSION }}
+            type=semver,pattern={{major}}.{{minor}},priority=900,value=${{ env.VERSION }}
+            type=semver,pattern={{major}},priority=800,value=${{ env.VERSION }}
+            type=sha,priority=700
+            type=ref,event=pr,priority=600
+            type=ref,event=branch,priority=500
+            type=schedule,priority=400
 
       - name: Create Manifest and Push Image
         working-directory: /tmp/digests
