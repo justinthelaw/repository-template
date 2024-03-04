@@ -16,6 +16,9 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
 
+    # won't trigger on a manual tag push
+    if: ${{ !startsWith(github.ref, 'refs/tags/') }}
+
     permissions:
       contents: write
       pull-requests: write
@@ -36,7 +39,6 @@ jobs:
 
   extract-version:
     runs-on: ubuntu-latest
-    needs: release-please
 
     permissions:
       contents: read
@@ -58,9 +60,9 @@ jobs:
 
   docker-build:
     runs-on: ubuntu-latest
-    needs: release-please # only triggers if new release tag is pushed
+    needs: extract-version # only triggers if new release tag is pushed
 
-    if: ${{ needs.release-please.outputs.release_created == 'true' }}
+    if: ${{ startsWith(github.ref, 'refs/tags/') }}
 
     strategy:
       fail-fast: false
