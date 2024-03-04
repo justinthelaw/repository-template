@@ -20,5 +20,6 @@ components:
     - name: example
       namespace: example
       localPath: chart
+      version: "###ZARF_PKG_TMPL_IMAGE_VERSION###"
     images:
       - "###ZARF_PKG_TMPL_IMAGE_REPOSITORY###:###ZARF_PKG_TMPL_IMAGE_VERSION###"
