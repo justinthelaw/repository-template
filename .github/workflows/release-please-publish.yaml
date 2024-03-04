@@ -65,6 +65,7 @@ jobs:
 
   docker-build:
     runs-on: ubuntu-latest
+    needs: extract-version
 
     strategy:
       fail-fast: false
@@ -134,7 +135,7 @@ jobs:
 
   docker-merge:
     runs-on: ubuntu-latest
-    needs: docker-build
+    needs: [docker-build, extract-version]
 
     env:
       VERSION: ${{needs.extract-version.outputs.version}}
