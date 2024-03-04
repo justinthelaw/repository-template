@@ -121,16 +121,17 @@ jobs:
           tags: ${{ env.REGISTRY }}/${{ env.REGISTRY_IMAGE }}
 
       - name: Export Digest
+        id: export
         run: |
           mkdir -p /tmp/digests && \
           digest="${{ steps.build.outputs.digest }}" && \
-          filename=${digest#sha256:} && \
+          filename=${digest#sha256:} && echo "filename=${filname}" >> $GITHUB_OUTPUT && \
           touch "/tmp/digests/${filename}"
 
       - name: Upload Digest
         uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4.3.1
         with:
-          name: ${{ steps.build.outputs.digest }}
+          name: ${{ steps.export.outputs.filename }}
           path: /tmp/digests/*
           if-no-files-found: error
           retention-days: 1
