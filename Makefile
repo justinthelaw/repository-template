@@ -55,7 +55,7 @@ docker-push:
 
 zarf-create:
 	if [ "$(VERSION)" = "dev" ]; then \
-		zarf package create . --confirm --set=PACKAGE_VERSION=$(VERSION) --set=IMAGE_VERSION=$(VERSION); \
+		zarf package create . --confirm --set=IMAGE_VERSION=$(VERSION); \
 	else \
 		zarf package create . --confirm; \
 	fi
@@ -64,4 +64,4 @@ zarf-deploy:
 	zarf package deploy --confirm zarf-package-*.tar.zst
 
 zarf-publish:
-	zarf package publish zarf-*.tar.zst oci://ghcr.io/justinthelaw/packages/
+	zarf package publish zarf-*.tar.zst oci://ghcr.io/justinthelaw/packages/repository-template/

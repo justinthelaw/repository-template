@@ -7,7 +7,6 @@
         "versioning": "default",
         "include-v-in-tag": false,
         "extra-files": [
-          "zarf.yaml",
           "zarf-config.yaml",
           {
             "type": "yaml",
