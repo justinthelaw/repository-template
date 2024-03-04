@@ -1,9 +1,7 @@
 kind: ZarfPackageConfig
 metadata:
   name: example
-  # x-release-please-start-version
-  version: 0.7.4
-  # x-release-please-end
+  version: "###ZARF_PKG_TMPL_IMAGE_VERSION###"
   description: >
     repository template example package
 
@@ -22,7 +20,5 @@ components:
     - name: example
       namespace: example
       localPath: chart
-      releaseName: "###ZARF_PKG_TMPL_NAME###"
-      version: "###ZARF_PKG_TMPL_IMAGE_VERSION###"
     images:
       - "###ZARF_PKG_TMPL_IMAGE_REPOSITORY###:###ZARF_PKG_TMPL_IMAGE_VERSION###"
