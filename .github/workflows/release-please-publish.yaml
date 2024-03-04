@@ -46,13 +46,13 @@ jobs:
       uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       if: ${{ !startsWith(github.ref, 'refs/tags/') }}
 
-    - name: Set VERSION from manifest
+    - name: Set VERSION from Manifest
       if: ${{ !startsWith(github.ref, 'refs/tags/') }}
       run: |
         VERSION=$(jq -r '.thisKey' ./.release-please-manifest.json)
         echo "VERSION=$VERSION" >> $GITHUB_ENV
 
-    - name: Set VERSION from tag
+    - name: Set VERSION from Tag
       if: ${{ startsWith(github.ref, 'refs/tags/') }}
       run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
 
@@ -182,5 +182,10 @@ jobs:
     - name: Build Zarf Package
       run: make zarf-create
 
+    - name: Build Zarf Dev Package
+      if: ${{ startsWith(github.ref, 'refs/tags/') }}
+      run: make zarf-create VERSION=dev
+
     - name: Publish Zarf Package
+      if: ${{ !startsWith(github.ref, 'refs/tags/') }}
       run: make zarf-publish
