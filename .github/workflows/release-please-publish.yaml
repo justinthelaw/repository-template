@@ -125,7 +125,7 @@ jobs:
         run: |
           mkdir -p /tmp/digests && \
           digest="${{ steps.build.outputs.digest }}" && \
-          filename=${digest#sha256:} && echo "filename=${filname}" >> $GITHUB_OUTPUT && \
+          filename=${digest#sha256:} && echo "filename=${filename}" >> $GITHUB_OUTPUT && \
           touch "/tmp/digests/${filename}"
 
       - name: Upload Digest
