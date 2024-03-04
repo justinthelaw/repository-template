@@ -5,8 +5,8 @@
         "draft": false,
         "changelog-path": "CHANGELOG.md",
         "versioning": "default",
+        "include-v-in-tag": false,
         "extra-files": [
-          "zarf.yaml",
           "zarf-config.yaml",
           {
             "type": "yaml",
@@ -22,6 +22,16 @@
             "type": "json",
             "path": "package.json",
             "jsonpath": "$.version"
+          },
+          {
+            "type": "json",
+            "path": "package-lock.json",
+            "jsonpath": "$.version"
+          },
+          {
+            "type": "json",
+            "path": "package-lock.json",
+            "jsonpath": "$.packages.version"
           },
           {
             "type": "toml",
