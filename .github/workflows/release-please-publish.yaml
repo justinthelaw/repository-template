@@ -180,6 +180,7 @@ jobs:
       uses: defenseunicorns/setup-zarf@f95763914e20e493bb5d45d63e30e17138f981d6 # v1.0.0
 
     - name: Build Zarf Package
+      if: ${{ !startsWith(github.ref, 'refs/tags/') }}
       run: make zarf-create
 
     - name: Build Zarf Dev Package
@@ -187,5 +188,4 @@ jobs:
       run: make zarf-create VERSION=dev
 
     - name: Publish Zarf Package
-      if: ${{ !startsWith(github.ref, 'refs/tags/') }}
       run: make zarf-publish
