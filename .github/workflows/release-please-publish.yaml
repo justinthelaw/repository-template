@@ -83,6 +83,7 @@ jobs:
             type=semver,pattern={{version}},priority=1000,value=${{ env.VERSION }}
             type=semver,pattern={{major}}.{{minor}},priority=900,value=${{ env.VERSION }}
             type=semver,pattern={{major}},priority=800,value=${{ env.VERSION }}
+            type=raw,priority=750,value=${{ env.VERSION }}
             type=sha,priority=700
             type=ref,event=pr,priority=600
             type=ref,event=branch,priority=500
@@ -154,6 +155,7 @@ jobs:
             type=semver,pattern={{version}},priority=1000,value=${{ env.VERSION }}
             type=semver,pattern={{major}}.{{minor}},priority=900,value=${{ env.VERSION }}
             type=semver,pattern={{major}},priority=800,value=${{ env.VERSION }}
+            type=raw,priority=750,value=${{ env.VERSION }}
             type=sha,priority=700
             type=ref,event=pr,priority=600
             type=ref,event=branch,priority=500
