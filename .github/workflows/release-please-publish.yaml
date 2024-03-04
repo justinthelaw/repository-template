@@ -122,9 +122,9 @@ jobs:
 
       - name: Export Digest
         run: |
-          mkdir -p /tmp/digests
-          digest="${{ steps.build.outputs.digest }}"
-          filename=${digest#sha256:}
+          mkdir -p /tmp/digests && \
+          digest="${{ steps.build.outputs.digest }}" && \
+          filename=${digest#sha256:} && echo $filename && echo ${filename} && \
           touch "/tmp/digests/${filename}"
 
       - name: Upload Digest
