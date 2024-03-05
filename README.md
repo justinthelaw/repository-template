@@ -2,8 +2,6 @@
 
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/justinthelaw/repository-template/badge)](https://securityscorecards.dev/viewer/?uri=github.com/justinthelaw/repository-template)
 
-This serves as the authoritative source of truth for how AI and ML projects should be setup.
-
 ## Template Usage
 
 This can be used as a GitHub repository template, or as a location to store certain best-practice artifacts and configurations for copying over to relevant repositories.
