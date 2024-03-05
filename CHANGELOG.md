@@ -5,6 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.2](https://github.com/justinthelaw/repository-template/compare/0.8.1...0.8.2) (2024-03-04)
+
+
+### Bug Fixes
+
+* manifest version jq parse ([#96](https://github.com/justinthelaw/repository-template/issues/96)) ([26d36d1](https://github.com/justinthelaw/repository-template/commit/26d36d169689983387570fae9a386a3e0ffb63f3))
+
+## [0.8.1](https://github.com/justinthelaw/repository-template/compare/0.8.0...0.8.1) (2024-03-04)
+
+
+### Bug Fixes
+
+* manifest version pull ([#94](https://github.com/justinthelaw/repository-template/issues/94)) ([094fa29](https://github.com/justinthelaw/repository-template/commit/094fa2928fc4c3d4a87a0c71cfaea340b8f1479f))
+
+## [0.8.0](https://github.com/justinthelaw/repository-template/compare/v0.7.4...0.8.0) (2024-03-04)
+
+
+### Features
+
+* new versioning dynamic ([#86](https://github.com/justinthelaw/repository-template/issues/86)) ([32b6df1](https://github.com/justinthelaw/repository-template/commit/32b6df1ae6c5aba046708f01926da75e0b35f86e))
+
+
+### Bug Fixes
+
+* release please versioning and workflows ([#87](https://github.com/justinthelaw/repository-template/issues/87)) ([b446491](https://github.com/justinthelaw/repository-template/commit/b446491197c11986bdfea4ffcaa644d83bd6c309))
+* stop publishing for non-release ([#89](https://github.com/justinthelaw/repository-template/issues/89)) ([f5cf327](https://github.com/justinthelaw/repository-template/commit/f5cf327153763b380646efadbecad47a41d20d5d))
+
 ## [0.7.4](https://github.com/justinthelaw/repository-template/compare/v0.7.3...v0.7.4) (2024-03-01)
 
 
