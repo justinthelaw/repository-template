@@ -28,7 +28,6 @@ jobs:
         uses: google-github-actions/release-please-action@cc61a07e2da466bebbc19b3a7dd01d6aecb20d1e # v4.0.0
         with:
           command: manifest # use configs in release-please-config.json
-          default-branch: main
 
       - name: Create Publish Flag
         id: release-flag

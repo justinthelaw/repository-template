@@ -2,9 +2,9 @@
     "packages": {
       ".": {
         "release-type": "simple",
+        "versioning": "default",
         "draft": true,
         "changelog-path": "CHANGELOG.md",
-        "versioning": "default",
         "include-v-in-tag": false,
         "extra-files": [
           "zarf-config.yaml",
