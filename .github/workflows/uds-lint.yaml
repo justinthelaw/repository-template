@@ -27,7 +27,22 @@ jobs:
         run: curl -o uds.schema.json https://raw.githubusercontent.com/defenseunicorns/uds-cli/main/uds.schema.json
 
       - name: Install jsonschema
-        run: pip install check-jsonschema
+        run: pip install check-jsonschema==0.28.0
 
-      - name: Validate UDS Configs Against Schema
-        run: check-jsonschema ^uds*.yaml$ --schemafile uds.schema.json
+      - name: Validate uds-bundle.yaml If Exists
+        run: |
+          if [ -f "uds-bundle.yaml" ]; then
+            echo "uds-bundle.yaml exists."
+            check-jsonschema uds-bundle.yaml uds-config.yaml --schemafile uds.schema.json
+          else
+            echo "uds-bundle.yaml does not exist."
+          fi
+
+      - name: Validate uds-config.yaml If Exists
+        run: |
+          if [ -f "uds-config.yaml" ]; then
+            echo "uds-config.yaml exists."
+            check-jsonschema uds-config.yaml uds-config.yaml --schemafile uds.schema.json
+          else
+            echo "uds-config.yaml does not exist."
+          fi
