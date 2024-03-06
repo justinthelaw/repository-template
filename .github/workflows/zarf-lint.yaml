@@ -33,7 +33,7 @@ jobs:
         run: |
           if [ -f "zarf.yaml" ]; then
             echo "zarf.yaml exists."
-            check-jsonschema zarf.yaml zarf-config.yaml --schemafile zarf.schema.json
+            check-jsonschema zarf.yaml --schemafile zarf.schema.json
           else
             echo "zarf.yaml does not exist."
           fi

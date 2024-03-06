@@ -33,7 +33,7 @@ jobs:
         run: |
           if [ -f "uds-bundle.yaml" ]; then
             echo "uds-bundle.yaml exists."
-            check-jsonschema uds-bundle.yaml uds-config.yaml --schemafile uds.schema.json
+            check-jsonschema uds-bundle.yaml --schemafile uds.schema.json
           else
             echo "uds-bundle.yaml does not exist."
           fi
