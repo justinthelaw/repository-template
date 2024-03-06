@@ -29,20 +29,11 @@ jobs:
       - name: Install jsonschema
         run: pip install check-jsonschema==0.28.0
 
-      - name: Validate zarf.yaml If Exists
+      - name: Validate zarf.yaml
         run: |
           if [ -f "zarf.yaml" ]; then
             echo "zarf.yaml exists."
             check-jsonschema zarf.yaml zarf-config.yaml --schemafile zarf.schema.json
           else
             echo "zarf.yaml does not exist."
-          fi
-
-      - name: Validate zarf-config.yaml If Exists
-        run: |
-          if [ -f "zarf-config.yaml" ]; then
-            echo "zarf-config.yaml exists."
-            check-jsonschema zarf-config.yaml zarf-config.yaml --schemafile zarf.schema.json
-          else
-            echo "zarf-config.yaml does not exist."
           fi
