@@ -1,18 +1,18 @@
 name: UDS Lint
 
 on:
-    push:
-      branches:
-        - '!main'
-    pull_request:
-      branches: [main]
+  push:
+    branches:
+      - '!main'
+  pull_request:
+    branches: [main]
 
 jobs:
   uds-lint:
     runs-on: ubuntu-latest
 
     permissions:
-        contents: read
+      contents: read
 
     steps:
       - name: Checkout Repo
@@ -20,12 +20,14 @@ jobs:
 
       - name: Set up Python
         uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
+        with:
+          python-version: 3.11.6
 
       - name: Download UDS Schema
         run: curl -o uds.schema.json https://raw.githubusercontent.com/defenseunicorns/uds-cli/main/uds.schema.json
 
       - name: Install jsonschema
-        run: pip install jsonschema
+        run: pip install check-jsonschema
 
       - name: Validate UDS Configs Against Schema
-        run: jsonschema -i uds.yaml uds.schema.json
+        run: check-jsonschema ^uds*.yaml$ --schemafile uds.schema.json

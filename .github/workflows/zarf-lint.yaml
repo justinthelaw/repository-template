@@ -1,18 +1,18 @@
 name: Zarf Lint
 
 on:
-    push:
-      branches:
-        - '!main'
-    pull_request:
-      branches: [main]
+  push:
+    branches:
+      - '!main'
+  pull_request:
+    branches: [main]
 
 jobs:
   zarf-lint:
     runs-on: ubuntu-latest
 
     permissions:
-        contents: read
+      contents: read
 
     steps:
       - name: Checkout Repo
@@ -20,12 +20,14 @@ jobs:
 
       - name: Set up Python
         uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
+        with:
+          python-version: 3.11.6
 
       - name: Download Zarf Schema
         run: curl -o zarf.schema.json https://raw.githubusercontent.com/defenseunicorns/zarf/main/zarf.schema.json
 
       - name: Install jsonschema
-        run: pip install jsonschema
+        run: pip install check-jsonschema
 
       - name: Validate Zarf Configs Against Schema
-        run: jsonschema -i zarf.yaml zarf.schema.json
+        run: check-jsonschema ^zarf*.yaml$ --schemafile zarf.schema.json
