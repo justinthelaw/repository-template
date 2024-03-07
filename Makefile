@@ -5,6 +5,8 @@ endif
 
 DEVICE ?= 0
 
+ARCH ?= amd64
+
 .PHONY: all
 
 create-venv:
@@ -54,10 +56,10 @@ docker-push:
 	docker push ghcr.io/justinthelaw/repository-template/example:${VERSION}
 
 zarf-create:
-	zarf package create . --confirm --set=IMAGE_VERSION=$(VERSION); \
+	zarf package create . --confirm --set=IMAGE_VERSION=$(VERSION) --architecture ${ARCH}
 
 zarf-deploy:
-	zarf package deploy --confirm zarf-package-*.tar.zst
+	zarf package deploy --confirm zarf*${ARCH}*.tar.zst
 
 zarf-publish:
-	zarf package publish zarf-*.tar.zst oci://ghcr.io/justinthelaw/packages/repository-template/
+	zarf package publish zarf*${ARCH}*.tar.zst oci://ghcr.io/justinthelaw/packages/repository-template/
