@@ -1,13 +1,7 @@
 name: Python Lint and Format
 
 on:
-  push:
-    branches:
-      - '!main'
-    paths:
-      - '**/*.py'
   pull_request:
-    branches: [main]
     paths:
       - '**/*.py'
 
@@ -18,7 +12,7 @@ concurrency:
 jobs:
   ruff:
     runs-on: ubuntu-latest
-    
+
     permissions:
       contents: read
 

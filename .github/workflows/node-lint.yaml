@@ -1,15 +1,7 @@
 name: Node Lint and Format
 
 on:
-  push:
-    branches:
-      - '!main'
-    paths:
-      - '**/*.js'
-      - '**/*.ts'
-      - '**/*.svelte'
   pull_request:
-    branches: [main]
     paths:
       - '**/*.js'
       - '**/*.ts'

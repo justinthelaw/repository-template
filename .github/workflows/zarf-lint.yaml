@@ -1,13 +1,7 @@
 name: Zarf Lint
 
 on:
-  push:
-    branches:
-      - '!main'
-    paths:
-      - '**/zarf.yaml'
   pull_request:
-    branches: [main]
     paths:
       - '**/zarf.yaml'
 

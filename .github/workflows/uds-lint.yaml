@@ -1,13 +1,7 @@
 name: UDS Lint
 
 on:
-  push:
-    branches:
-      - '!main'
-    paths:
-      - '**/uds.yaml'
   pull_request:
-    branches: [main]
     paths:
       - '**/uds.yaml'
 

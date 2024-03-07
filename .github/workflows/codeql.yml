@@ -1,16 +1,7 @@
 name: CodeQL Scans
 
 on:
-  push:
-    branches:
-      - '!main'
-    paths:
-      - '**/*.py'
-      - '**/*.js'
-      - '**/*.ts'
-      - '**/*.svelte'
   pull_request:
-    branches: [main]
     paths:
       - '**/*.py'
       - '**/*.js'
