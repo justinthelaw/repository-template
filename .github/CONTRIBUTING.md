@@ -32,6 +32,7 @@ Specifically:
     - Typescript and Svelte linting and formatting
     - Zarf schema linting
     - UDS schema linting
+    - Helm chart linting
     - Dependency file warnings
 4. Create a Draft Pull Request as soon as you can, even if it is just 5 minutes after you started working on it. We lean towards working in the open as much as we can.
     > ⚠️ **NOTE:** _:key: We use [Conventional Commit messages](https://www.conventionalcommits.org/) in PR titles so, if you can, use one of `fix:`, `feat:`, `chore:`, `docs:` or similar. If you need help, just use with `wip:` and we'll help with the rest_

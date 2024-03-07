@@ -1,30 +1,27 @@
-name: Lint Manifests
+name: Dockerfile Lint
 
 on:
   push:
     branches:
       - '!main'
+    paths:
+      - 'Dockerfile*'
   pull_request:
-      branches: [main]
+    branches: [main]
+    paths:
+      - 'Dockerfile*'
 
 concurrency:
-  group: manifest-${{ github.ref }}
+  group: dockerlint-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  lint-helm:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-
-      - name: Lint Helm
-        uses: WyriHaximus/github-action-helm3@6c2b7200d597e38a3f2cd901b50046c800fc144b # v4.0.0
-        with:
-          exec: helm lint ./chart
-
   docker-lint:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
     steps:
       - name: Checkout Repo
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
