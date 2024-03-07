@@ -57,5 +57,3 @@ We've chosen to use ADRs to document architecturally significant decisions. We p
 - The criteria for when an ADR is needed is undefined. The team will decide when the team needs an ADR.
 - We _can_ (OPTIONAL) use the tool [adr-tools](https://github.com/npryce/adr-tools) to make it easier on us to create and maintain ADRs.
 - We will keep ADRs specific to this package in the repository under `adr/NNNN-name-of-adr.md`.
-    > `adr-tools` is configured with a dotfile to automatically use this directory and format.
-- We will keep ADRs relating to Software Factory as a whole in the [UDS Software Factory](https://github.com/defenseunicorns/uds-software-factory) repository under `adr/NNNN-name-of-adr.md`.
