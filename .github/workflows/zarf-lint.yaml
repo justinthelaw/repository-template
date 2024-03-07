@@ -7,6 +7,10 @@ on:
   pull_request:
     branches: [main]
 
+concurrency:
+  group: zarflint-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   zarf-lint:
     runs-on: ubuntu-latest

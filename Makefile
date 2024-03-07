@@ -54,11 +54,7 @@ docker-push:
 	docker push ghcr.io/justinthelaw/repository-template/example:${VERSION}
 
 zarf-create:
-	if [ "$(VERSION)" = "dev" ]; then \
-		zarf package create . --confirm --set=IMAGE_VERSION=$(VERSION); \
-	else \
-		zarf package create . --confirm; \
-	fi
+	zarf package create . --confirm --set=IMAGE_VERSION=$(VERSION); \
 
 zarf-deploy:
 	zarf package deploy --confirm zarf-package-*.tar.zst
