@@ -218,4 +218,4 @@ jobs:
           make zarf-create VERSION=${{ env.VERSION }} ARCH=${{ matrix.platform }}
 
     - name: Publish Zarf Package
-      run: make zarf-publish
+      run: make zarf-publish ARCH=${{ matrix.platform }}
