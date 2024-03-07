@@ -4,8 +4,12 @@ on:
   push:
     branches:
       - '!main'
+    paths:
+      - 'charts/*'
   pull_request:
-      branches: [main]
+    branches: [main]
+    paths:
+      - 'charts/*'
 
 concurrency:
   group: helmlint-${{ github.ref }}

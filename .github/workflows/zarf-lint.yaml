@@ -4,8 +4,12 @@ on:
   push:
     branches:
       - '!main'
+    paths:
+      - '**/zarf.yaml'
   pull_request:
     branches: [main]
+    paths:
+      - '**/zarf.yaml'
 
 concurrency:
   group: zarflint-${{ github.ref }}
