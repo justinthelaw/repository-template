@@ -28,6 +28,6 @@
         "prettier": "^3.0.0",
         "prettier-plugin-organize-imports": "^3.2.2",
         "prettier-plugin-svelte": "^3.0.3",
-        "svelte": "^4.2.11"
+        "svelte": "^4.2.14"
     }
 }
