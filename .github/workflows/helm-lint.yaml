@@ -5,11 +5,11 @@ on:
     branches:
       - '!main'
     paths:
-      - 'charts/*'
+      - 'chart/*'
   pull_request:
     branches: [main]
     paths:
-      - 'charts/*'
+      - 'chart/*'
 
 concurrency:
   group: helmlint-${{ github.ref }}
